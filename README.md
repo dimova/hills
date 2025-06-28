@@ -1,3 +1,9 @@
+# Solution
+1. Implemented the filtering correctly so that all tests in FilteringTest pass.
+2. Fixed any bugs(s) causing test failures in AllParamsTest .
+3. Did a code review of HillSearchService class. Will bring notes to the interview.
+4. Refactored the HillSearchService class to support loading data from different sources, e.g. XML or JSON files.
+
 # Munro's Tables
 
 A simple web service which supports searching and sorting Munro's tables. Only hills included in the most recent
