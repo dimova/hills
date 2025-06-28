@@ -19,10 +19,16 @@ repositories {
     mavenLocal()
 }
 
+val jacksonVersion = "2.17.0"
+
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation(libs.opencsv)
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.17.0")
+    implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+    implementation("com.fasterxml.jackson.core:jackson-core:$jacksonVersion")
+    implementation("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:$jacksonVersion")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

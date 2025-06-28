@@ -2,7 +2,8 @@ package com.xdesign.munrotable.datasource;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.xdesign.munrotable.model.Hill;
-import com.xdesign.munrotable.model.HillsWrapper;
+import com.xdesign.munrotable.model.Hills;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -21,8 +22,8 @@ public class XmlHillDataSource implements HillDataSource {
     @Override
     public List<Hill> loadHills() {
         try {
-            HillsWrapper wrapper = xmlMapper.readValue(xmlFile, HillsWrapper.class);
-            return wrapper.getHills();
+            Hills wrapper = xmlMapper.readValue(xmlFile, Hills.class);
+            return wrapper.getHillList();
         } catch (IOException ex) {
             throw new RuntimeException("Failed to load hills from XML file", ex);
         }
